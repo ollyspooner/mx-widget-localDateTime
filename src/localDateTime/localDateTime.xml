@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="localDateTime.widget.localDateTime" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>localDateTime</name>
+    <description>The description of this widget.</description>
+
+    <icon />
+
+    <properties>
+        <property key="dateParts" type="enumeration" required="true" defaultValue="both">
+            <caption>Date and time parts</caption>
+            <category>Format</category>
+            <description>Whether to include the date, the time or both.</description>
+            <enumerationValues>
+                <enumerationValue key="both">Date and time</enumerationValue>
+                <enumerationValue key="date">Date only</enumerationValue>
+                <enumerationValue key="time">Time only</enumerationValue>
+            </enumerationValues>
+        </property>
+
+        <property key="dayFormat" type="enumeration" required="true" defaultValue="_2_digit">
+            <caption>Day format</caption>
+            <category>Format</category>
+            <description>The representation of the day.</description>
+            <enumerationValues>
+                <enumerationValue key="numeric">numeric</enumerationValue>
+                <enumerationValue key="_2_digit">2-digit</enumerationValue>
+            </enumerationValues>
+        </property>
+        <property key="monthFormat" type="enumeration" required="true" defaultValue="short">
+            <caption>Month format</caption>
+            <category>Format</category>
+            <description>The representation of the month.</description>
+            <enumerationValues>
+                <enumerationValue key="numeric">numeric</enumerationValue>
+                <enumerationValue key="_2_digit">2-digit</enumerationValue>
+                <enumerationValue key="narrow">narrow</enumerationValue>
+                <enumerationValue key="short">short</enumerationValue>
+                <enumerationValue key="long">long</enumerationValue>
+            </enumerationValues>
+        </property>
+        <property key="yearFormat" type="enumeration" required="true" defaultValue="numeric">
+            <caption>Year format</caption>
+            <category>Format</category>
+            <description>The representation of the year.</description>
+            <enumerationValues>
+                <enumerationValue key="numeric">numeric</enumerationValue>
+                <enumerationValue key="_2_digit">2-digit</enumerationValue>
+            </enumerationValues>
+        </property>
+
+        <property key="hourFormat" type="enumeration" required="true" defaultValue="_2_digit">
+            <caption>Hour format</caption>
+            <category>Format</category>
+            <description>The representation of the hour.</description>
+            <enumerationValues>
+                <enumerationValue key="numeric">numeric</enumerationValue>
+                <enumerationValue key="_2_digit">2-digit</enumerationValue>
+            </enumerationValues>
+        </property>
+        <property key="minuteFormat" type="enumeration" required="true" defaultValue="_2_digit">
+            <caption>Minute format</caption>
+            <category>Format</category>
+            <description>The representation of the minute.</description>
+            <enumerationValues>
+                <enumerationValue key="numeric">numeric</enumerationValue>
+                <enumerationValue key="_2_digit">2-digit</enumerationValue>
+            </enumerationValues>
+        </property>
+        <property key="secondFormat" type="enumeration" required="true" defaultValue="_2_digit">
+            <caption>Second format</caption>
+            <category>Format</category>
+            <description>The representation of the second.</description>
+            <enumerationValues>
+                <enumerationValue key="numeric">numeric</enumerationValue>
+                <enumerationValue key="_2_digit">2-digit</enumerationValue>
+            </enumerationValues>
+        </property>
+
+        <property key="separator" type="string" required="true" defaultValue=" ">
+            <caption>Separator</caption>
+            <category>Format</category>
+            <description>The character to use to separate the date from the time.</description>
+        </property>
+        <property key="dateDelimiter" type="string" required="true" defaultValue="-">
+            <caption>Date delimiter</caption>
+            <category>Format</category>
+            <description>The character to use to separate the date parts.</description>
+        </property>
+        <property key="timeDelimiter" type="string" required="true" defaultValue=":">
+            <caption>Time delimiter</caption>
+            <category>Format</category>
+            <description>The character to use to separate the time parts.</description>
+        </property>
+
+        <property key="offsetAttribute" type="attribute" required="true" defaultValue="">
+            <caption>Offset</caption>
+            <category>General</category>
+            <description>Select the integer attribute that contains the positive or negative offset in seconds.</description>
+            <attributeTypes>
+                <attributeType name="Integer"/>
+            </attributeTypes>
+        </property>
+    </properties>
+</widget>
